@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> Use the latest (edge) version of IE rendering engine -->
+    <!-- <meta name="x-apple-disable-message-reformatting">  Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700italic" rel="stylesheet">
+
+    <!-- CSS Reset : BEGIN -->
+<style>
+
+html,
+body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background: #f1f1f1;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode:bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+a {
+    text-decoration: none;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],  /* iOS */
+.unstyle-auto-detected-links *,
+.aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+    color: inherit !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+    display: none !important;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+
+</style>
+
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+<style>
+
+.primary{
+	background: #f3a333;
+}
+
+.bg_white{
+	background: #ffffff;
+}
+.bg_light{
+	background: #fafafa;
+}
+.bg_black{
+	background: #000000;
+}
+.bg_dark{
+	background: rgba(0,0,0,.8);
+}
+.email-section{
+	padding:2.5em;
+}
+
+/*BUTTON*/
+.btn{
+	padding: 10px 15px;
+}
+.btn.btn-primary{
+	border-radius: 30px;
+	background: #f3a333;
+	color: #ffffff;
+}
+
+
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Playfair Display', serif;
+	color: #000000;
+	margin-top: 0;
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 2em;
+	color: #ffffff;
+}
+
+a{
+	color: #f3a333;
+}
+
+table{
+}
+/*LOGO*/
+
+.logo h1{
+	margin: 0;
+}
+.logo h1 a{
+	color: #000;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*HERO*/
+.hero{
+	position: relative;
+}
+.hero img{
+
+}
+.hero .text{
+	color: rgba(255,255,255,.8);
+}
+.hero .text h2{
+	color: #ffffff;
+	font-size: 30px;
+	margin-bottom: 0;
+}
+
+
+/*HEADING SECTION*/
+.heading-section{
+}
+.heading-section h2{
+	color: #000000;
+	font-size: 28px;
+	margin-top: 0;
+	line-height: 1.4;
+}
+.heading-section .subheading{
+	margin-bottom: 20px !important;
+	display: inline-block;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(0,0,0,.4);
+	position: relative;
+}
+.heading-section .subheading::after{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #f3a333;
+	margin: 0 auto;
+}
+
+.heading-section-white{
+	color: rgba(255,255,255,.8);
+}
+.heading-section-white h2{
+	font-size: 28px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+	line-height: 1;
+	padding-bottom: 0;
+}
+.heading-section-white h2{
+	color: #ffffff;
+}
+.heading-section-white .subheading{
+	margin-bottom: 0;
+	display: inline-block;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(255,255,255,.4);
+}
+
+
+.icon{
+	text-align: center;
+}
+.icon img{
+}
+
+
+/*SERVICES*/
+.text-services{
+	padding: 10px 10px 0; 
+	text-align: center;
+}
+.text-services h3{
+	font-size: 20px;
+}
+
+/*BLOG*/
+.text-services .meta{
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+/*TESTIMONY*/
+.text-testimony .name{
+	margin: 0;
+}
+.text-testimony .position{
+	color: rgba(0,0,0,.3);
+
+}
+
+
+/*VIDEO*/
+.img{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.img .icon{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin-top: -25px;
+}
+.img .icon a{
+	display: block;
+	width: 60px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -25px;
+}
+
+
+
+/*COUNTER*/
+.counter-text{
+	text-align: center;
+}
+.counter-text .num{
+	display: block;
+	color: #ffffff;
+	font-size: 34px;
+	font-weight: 700;
+}
+.counter-text .name{
+	display: block;
+	color: rgba(255,255,255,.9);
+	font-size: 13px;
+}
+
+
+/*FOOTER*/
+
+.footer{
+	color: rgba(255,255,255,.5);
+
+}
+.footer .heading{
+	color: #ffffff;
+	font-size: 20px;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+}
+.footer ul li{
+	list-style: none;
+	margin-bottom: 10px;
+}
+.footer ul li a{
+	color: rgba(255,255,255,1);
+}
+
+
+@media screen and (max-width: 500px) {
+
+	.icon{
+		text-align: left;
+	}
+
+	.text-services{
+		padding-left: 0;
+		padding-right: 20px;
+		text-align: left;
+	}
+
+}
+
+/*@media screen and (max-width: 1920px) {
+  .abc {
+      width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 680px) {
+  .abc {
+    width: 200%;
+  }
+
+}*/
+
+</style>
+
+</head>
+
+<body width="200%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;">
+	<center style="width: 100%; background-color: #f1f1f1;">
+    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div style="width: 50rem; margin: 0 auto; line-height:2em;" class="email-container abc">
+    	<!-- BEGIN BODY -->
+      <!-- http://drive.google.com/uc?export=view&id=1JoaJgFt6rX8uqgvsWj7ryzU3-XPoWS_B -->
+      
+      <table background="" align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="40rem" style="margin: auto; background-size: contain; background-repeat: no-repeat; width: 100%;">
+        <tr>
+          <td>
+            <img src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/312572415_463432719221492_1495176404838207740_n.png?stp=dst-png_p960x960&_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeHHFtqggmAYxztTql5X8O1Sn0KNf_3f9V-fQo1__d_1X984WeOQrI5q2fKMi1zr2T-4heBmUqiKAsrwJ5QaiYve&_nc_ohc=_3OYyA9VSDcAX--gE2j&_nc_ht=scontent.fkhi16-1.fna&oh=00_AfBJ2eR4PjjFl5Q8ZAIQUsduRlMANEFAWb2dpqmq_hN-xQ&oe=6423DDB0" style="width: 100%; height:60%; margin-bottom:-10rem;">
+          </td>
+        </tr>
+				
+	      <tr>
+		      <td class="bg_white">
+		        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+		          <tr>
+		            <td class="email-section" style="text-align:center; background: -webkit-linear-gradient(145deg,#47009e,black 90%)">
+		            	<div class="heading-section heading-section-white">
+		            		<span class="subheading" style="color:white;">Welcome</span>
+		              	<h2 style="font-family:Montserrat;font-size:1.5em;margin-top:0.5em;line-height:2em;">Welcome To BYTECORP PROCOM 2023</h2>
+		              	<p style="font-size:15px;line-height:2em;">Team Bytecorp Procom 2023 extends its gratitude to wholeheartedly welcome you to one of the biggest event of Sindh!</p>
+		            	</div>
+		            </td>
+		          </tr><!-- end: tr -->
+		          <tr>
+		            <td class="bg_white email-section">
+		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
+		            		<span class="subheading">Here's what you need to know</span>
+		              	<h2>Your Registration Info</h2>
+		              	<p style="line-height:2em; margin-bottom: -3rem;">Let's have an insight about what you'll be there at PROCOM for and all that you'll require on the event day.</p>
+		            	</div>
+		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+		            		<tr>
+                      <td valign="top" class="icon" width="50%" style="padding-top: 1rem;">
+                        <img src="http://drive.google.com/uc?export=view&id=15_6b8kS9XIG3BFaPsYJ8TQ8WgM-yEP9-" alt="" style="width: 100%; height: auto; margin: auto; display: block;">
+                      </td>
+                      <td valign="top" width="50%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="text-services">
+                              <h3 style='margin-top:1.5em;margin-bottom:-1em; margin-left:1rem;'>CS Competitions</h3>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                              <p style="color:black; margin-left:1rem;">Speed Programming, Data Science</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td valign="top" class="icon" width="50%" style="padding-top: 2rem;">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxMG6Uu4nNE9XSqnX3wbNSIaRLBLAyIu2IBQ&usqp=CAU" alt="" style="width: 100%; height: auto; margin: auto; display: block;">
+                        </td>
+                        <td valign="top" width="50%" style="padding-top: 2rem;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                              <td class="text-services">
+                                <h3 style='margin-top:1.5rem;margin-bottom:-1rem;margin-left:1rem;'>EE Competitions</h3>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="text-services">
+                                <p style="color:black;margin-left:1rem;">Circuit Soldering</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        </tr>
+
+                    <tr>
+                      <td valign="top" class="icon" width="50%" style="padding-top: 3rem;">
+                        <img src="https://icons.veryicon.com/png/o/miscellaneous/site-icon-library/team-28.png" alt="" style="width: 7rem; max-width: 600px; height: auto; margin: auto; display: block;">
+                      </td>
+                      <td valign="top" width="50%" style="padding-top: 2rem;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="text-services">
+                              <h3 style='margin-top:1rem;margin-bottom:-1rem;margin-left:1rem;'>Participants</h3>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                              <p style="color:black; margin-left:1rem;">Total Number of participants: 20</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      </tr>
+
+                      <tr>
+                      <td valign="top" class="icon" width="50%" style="padding-top: 3rem;">
+                        <img src="https://thumbs.dreamstime.com/b/pink-location-icon-pink-location-icon-isolated-white-background-119107136.jpg" alt="" style="width: 7rem; max-width: 600px; height: auto; margin: auto; display: block;">
+                      </td>
+                      <td valign="top" width="50%" style="padding-top: 2rem;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="text-services">
+                              <h3 style='margin-top:1rem;margin-bottom:-1rem;margin-left:1rem;'>Your Venue</h3>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                              <p style="color:black; margin-left:1rem;">Your classroom will be <b>E1</b></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      </tr>
+
+                      <tr>
+                      <td valign="top" class="icon" width="50%" style="padding-top: 3rem;">
+                        <img src="https://www.citypng.com/public/uploads/small/116412132839cw1wfd8sgy3irmdd8z0bxvhzh86jcfqukkexopdposu5dk8jo3wzclxs7k2rqa0h33gxtuxkxe1d4edydgba1sz2iuvfkwhpul2.png" alt="" style="width: 7rem; max-width: 600px; height: auto; margin: auto; display: block;">
+                      </td>
+                      <td valign="top" width="50%" style="padding-top: 2rem;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="text-services">
+                              <h3 style='margin-top:1rem;margin-bottom:-1rem;margin-left:1rem;'>Timings of competition</h3>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                              <p style="color:black; margin-left:1rem;">Time slot: <b>10:00 A.M. - 1 P.M.</b></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      </tr>
+                      </table>
+
+                      
+              <tr>
+                <td class="email-section" style="text-align:center; background: -webkit-linear-gradient(135deg,#ff77ff,#060048 50%)">
+                  <div class="heading-section heading-section-white">
+                    <span class="subheading" style="color:white; line-height:2em;">What you'll need on the event day?</span>
+                    <h2 style="font-family:Montserrat;font-size:1.5em;margin-top:0.5em;color:white; line-height:2em;">YOUR QR AND HEX CODES</h2>
+                    <p style="font-size:1.1em;line-height:2em;color:white; line-height:2em;">Only YOU will need to provide anyone of the following on the event day at the PR DESK</p>
+                    <p style="font-size:1.1em;line-height:2em;color:white; line-height:2em;">Your QR is attached at the end of this Email. And your HEXCODE is attached below:</p>
+                    <br>
+                    <table>
+                      <tr>
+                        <td>
+                          <br>
+                          <br> <br>
+                          <h1 style="font-size:4em; color:#ffffff;letter-spacing: 0.2em;">8CAA</h3>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr><!-- end: tr -->
+              <br><br>
+		          <tr>
+		            <td class="bg_white email-section">
+		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
+		            		<span class="subheading" style="color:white; line-height:2em;">WHAT MAKES US SPECIAL? LEARN MORE!</span>
+		              	<h2 style="color:white; line-height:2em;">MORE ABOUT PROCOM</h2>
+		              	<p style="text-align: justify;color:black; line-height:2em;">BYTECORP PROCOM 2023 is emerging to be one of Sindh's biggest competitive university event held at FAST NUCES Karachi Campus
+                       with a diversity of over 50 different tech, sports and e-sports, engineering, and creative activities. 
+                       Held annually, PROCOM is known for its quality of competition, JOB FAIR with over 50 companies, and the ambiance of the event!
+                      So make sure you're well prepared... Because the best thing about competition is the strength of the opponent!Also, don't forget to grab your CV!</p>
+                    <p>See you on <b>9th and 10th March 2023</b>!</p>
+                    <table>
+                    <tr>
+                      <td>
+                      <p><a href="https://procom23.net" target="_blank" class="btn btn-primary" style="background-color: #ee00ef;">LEARN MORE</a></p>
+                    </td>
+                    </tr>
+                    </table>
+                    <p style="color:black;margin-top:1em;">The schedule has been attached below for your ease for both Day 1 and Day 2</p>
+		            	</div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="email-section" style="background-color:rgb(185, 185, 185);">
+                    <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                      <span class="subheading" style="color:white;">Some rules you'll need to know</span>
+                      <h2>RULES AND REGULATIONS</h2>
+                      <ul style="text-align: justify; color:white; line-height: 2em; font-size:1.2em;">
+                        <li>You'll have to reach at your venue exactly at the time at which your competition is scheduled.</li>
+                        <li><b>ONLY THE TEAM LEADER</b> is required to process the QR Code / HEX Code at the PR DESK on the event day.</li>
+                        <li>This Email serves as your entrance pass. Make sure you keep it available <b>OFFLINE</b> and <b>SEND IT TO YOUR MEMBERS</b></li>
+                        <li>At the end of this email, a picture of rules and regulations is attached. <b>DON'T FORGET TO SEE IT.</b></li>
+                      </ul>
+                      <p style="color:Black; line-height: 2em;"><b>We wish to make our moments with you most amazingly and optimistically memorable. Being a part of Bytecorp PROCOM 2023, we owe you our respect and gratitude. So, let's witness a day worth making memories!</b></p>
+                      <!-- <p style="text-align: justify;color:black;"></p> -->
+                    </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                <td class="email-section" style="text-align:center; background: -webkit-linear-gradient(135deg,#ff77ff,#060048 30%)">
+                  <div class="heading-section heading-section-white">
+                    <span class="subheading" style="color:white;">THE TIMINGS AND TIME SLOTS</span>
+                    <h2 style="font-family:Montserrat;font-size:1.5em;margin-top:0.5em;">SCHEDULE OF COMPETITIONS - DAY 1</h2>
+                    <!-- <p style="font-size:15px;line-height:2em;"></p> -->
+                    <br>
+                    <table>
+                      <tr>
+                        <td>
+                          <img src="https://scontent.fkhi6-2.fna.fbcdn.net/v/t39.30808-6/333814005_590560099643565_3183624459331152944_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGBs4B9lhm5vpOB3Z4cyBrcAZawM_ns1EgBlrAz-ezUSCNCaa_QBcYSm8qwATJjpm0k7nKk8AinpxbhDaTbVWC6&_nc_ohc=rQrXlZpKbRIAX_UWo4W&_nc_zt=23&_nc_ht=scontent.fkhi6-2.fna&oh=00_AfCUs8ALUPzUf9P_-PuieSpPMX8yltanVHlVXRtyjR8gqA&oe=6409DDEA" alt="" style="width: 40rem; max-width: 1000px; height: auto; margin: auto; display: block;">
+                          <img src="https://scontent.fkhi6-2.fna.fbcdn.net/v/t39.30808-6/333941168_1193582754626107_8644572694671006333_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGAM-kXtPT_f9_70bsX9JJhrgtj-Cd3ihuuC2P4J3eKG77Ira0m3ebSIHINRPerzkI6W1MOg-Q0h4vsYtlbi1Zx&_nc_ohc=CHnu5DVKoLoAX_GyMwv&_nc_zt=23&_nc_ht=scontent.fkhi6-2.fna&oh=00_AfAIthlrSMP6O7D01Ebj-aHvmFj9h2DqZrD94eYdGb3Q0Q&oe=640AE3E3" alt="" style="width: 40rem; max-width: 1000px; height: auto; margin: auto; display: block;">
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr><!-- end: tr -->
+
+              <tr>
+                <td class="email-section" style="text-align:center; background: -webkit-linear-gradient(230deg,#ff77ff,#060048 30%)">
+                  <div class="heading-section heading-section-white">
+                    <span class="subheading" style="color:white;">THE TIMINGS AND TIME SLOTS</span>
+                    <h2 style="font-family:Montserrat;font-size:1.5em;margin-top:0.5em;">SCHEDULE OF COMPETITIONS - DAY 2</h2>
+                    <!-- <p style="font-size:15px;line-height:2em;"></p> -->
+                    <br>
+                    <table>
+                      <tr>
+                        <td>
+                          <img src="https://scontent.fkhi6-1.fna.fbcdn.net/v/t39.30808-6/333821999_911491409994042_2013826962783902462_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGgQW-bT_a6yCmkdyTT7IaoNqyAh0M5mgU2rICHQzmaBdo5mh0-engB8-uBUFE_vxJzwUixfF4Ol_KMY0Jy3CnB&_nc_ohc=wmRXELG2MSwAX8Zeini&_nc_zt=23&_nc_ht=scontent.fkhi6-1.fna&oh=00_AfD-HsvZQ6sRLhjRtjMN0HDofjCCZYFsbiLhXE7TCNmgxg&oe=640AF456" alt="" style="width: 40rem; max-width: 1000px; height: auto; margin: auto; display: block;">
+                          <img src="https://scontent.fkhi6-1.fna.fbcdn.net/v/t39.30808-6/334403202_224154576756684_6957665110900282933_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeFi4CBBp2un0_YYGCrk_FfbWyEk3DB5v-RbISTcMHm_5Il7YNSc7dXQa2cgMrxPR0DRCHeTSmuTnMciMaXenRCU&_nc_ohc=g24WrjcWmkMAX-hA2uU&_nc_zt=23&_nc_ht=scontent.fkhi6-1.fna&oh=00_AfDM_BkyiDrQuPykHVJBou6nOo6KnktoQ8NaUWg3cgmhMQ&oe=640A23B0" alt="" style="width: 40rem; max-width: 1000px; height: auto; margin: auto; display: block;">
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr><!-- end: tr -->
+		            </td>
+		          </tr><!-- end: tr -->
+
+              <tr>
+		            <td class="bg_white email-section">
+		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
+		            		<span class="subheading">WELL, THAT'S ALL WE'D LOVE TO TELL YOU!</span>
+		              	<h2>WANNA KNOW ANYTHING ELSE?</h2>
+		              	<p style="text-align: justify;color:black;">You can visit <a href="https://facebook.com/procom.net.pk">our facebook page</a>, or you can also check <a>our instagram conduit</a>. Furthermore, we're also available on <a href="https://www.linkedin.com/company/procom-23/">LinkedIn</a>.</p>
+                    
+                    
+		            	</div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="email-section" style="text-align:center; background: -webkit-linear-gradient(230deg,#ff77ff,#060048 30%)">
+                    <div class="heading-section heading-section-white">
+                      <span class="subheading" style="color:white;">RULES AND REGULATIONS</span>
+                      <h2 style="font-family:Montserrat;font-size:1.5em;margin-top:0.5em;">CODE OF CONDUCT - BYTECORP PROCOM 2023</h2>
+                      <!-- <p style="font-size:15px;line-height:2em;"></p> -->
+                      <br>
+                      <table>
+                        <tr>
+                          <td>
+                            <img src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/333134570_158276573762435_2614986305790731691_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeG4slqpnlf1HEUTkDI19i6gv9m758UR0eW_2bvnxRHR5T8Cn4hN2BiI0OjRFsKGjREMs-ngelPJOf1LEzuu9Dif&_nc_ohc=LwpmHgXFrE0AX8LQcUj&_nc_ht=scontent.fkhi16-1.fna&oh=00_AfAZ09EFHaf1s2gAFbFauQXFAXIO2y8JubdIu1umRMwGZQ&oe=640B9297" alt="" style="width: 40rem; max-width: 1000px; height: auto; margin: auto; display: block;">
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr><!-- end: tr -->
+
+        <tr>
+          <td class="bg_white email-section">
+            <div class="heading-section" style="text-align: center; padding: 0 30px;">
+              <span class="subheading">WE'RE EAGER TO WITNESS YOUR PRESENCE!</span>
+              <h3>THANK YOU FOR YOUR TRUST AND CONSIDERATION!</h3>
+              <p style="text-align: justify;color:black;"><b>Team BYTECORP PROCOM 2023</b> hopes to see you in a healthy competition on <b>9TH AND 10TH MARCH</b>! Till then, wishing you the BEST OF LUCK!</p>
+              
+            </div>
+            </td>
+          </tr>
+
+      </table>
+
+    </div>
+  </center>
+</body>
+</html>
